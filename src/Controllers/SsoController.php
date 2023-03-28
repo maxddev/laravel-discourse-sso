@@ -63,7 +63,7 @@ class SsoController extends Controller
      * The Discourse SSO API does not accept 0 or 1 for false or true.  You must send
      * "false" or "true", so convert any boolean property to the string version.
      */
-    public function castBooleansToString(string|bool $property): string
+    public function castBooleansToString(string|bool|null $property): string
     {
         if (! is_bool($property)) {
             return $property;
